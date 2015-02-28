@@ -1,0 +1,275 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ 
+  <!-- Pome model version -->  
+  <modelVersion>4.0.0</modelVersion>
+    
+  <!-- Project group ID -->
+  <groupId>org.devware.shiro</groupId>
+  
+  <!-- Project Artifact ID -->
+  <artifactId>shiro-jpa-realm</artifactId>
+  
+  <!-- Project Version -->
+  <version>1.0-SNAPSHOT</version>
+  
+  <!-- Project Packaging -->
+  <packaging>jar</packaging>
+    
+  <!-- Project name -->
+  <name>shiro-jpa-realm</name>
+  
+  <!-- Project URL -->
+  <url>http://maven.apache.org</url>
+  
+  <!-- Project description -->
+  <description>SHIRO SAMPLES FOR JPA REALM</description>
+  
+  <!-- Project developpers -->
+    <developers>
+        <developer>
+            <name>NGUIDJOI BELL Alain</name>
+            <email>nguibellar@yahoo.fr</email>
+            <organization>Megatim Group</organization>
+            <timezone>GMT+1</timezone>
+            <roles>
+		<role>Project Manager</role>
+		<role>Technical Architect</role>
+		<role>Integrator</role>
+		<role>Technical Support</role>
+		<role>Developer</role>
+            </roles>
+	</developer>
+     </developers>
+  
+  <repositories>
+    <repository>
+      <url>http://download.eclipse.org/rt/eclipselink/maven.repo/</url>
+      <id>eclipselink</id>
+      <layout>default</layout>
+      <name>Repository for library EclipseLink (JPA 2.0)</name>
+    </repository>
+    <repository>
+			<id>oracle-ojdbc-repository</id>
+			<name>Oracle OJDBC Driver Repository</name>
+			<url>https://code.lds.org/nexus/content/groups/main-repo/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+    </repository>
+    
+    
+  </repositories>
+  
+  <pluginRepositories>
+                       
+		<pluginRepository>
+			<id>oracle-ojdbc-repository</id>
+			<name>Oracle OJDBC Driver Repository</name>
+			<url>https://code.lds.org/nexus/content/groups/main-repo/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+    
+    </pluginRepositories>
+  
+  <properties>
+    <!-- Encoding version properties -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  
+        <!-- shiro version properties -->
+        <shiro.version>1.2.3</shiro.version>
+
+        <!-- version property -->
+        <ehcache.version>2.5.0</ehcache.version>
+        
+        <!-- hsqldb version property -->
+        <hsqldb.version>2.3.2</hsqldb.version>
+        
+        <!-- jdk version property -->
+        <jdk.version>1.6</jdk.version>
+        
+        <!-- maven dependency plugin version property -->
+        <maven.compiler.version>2.5.1</maven.compiler.version>
+        
+        <!-- maven dependency plugin version property -->
+        <maven.dependency.version>2.1</maven.dependency.version>
+        
+        <!-- maven jar plugin version property -->
+        <maven.jar.version>2.4</maven.jar.version>
+        
+        <!-- hibernate validator version property -->
+        <hibernate.validator.version>4.2.0.Final</hibernate.validator.version>
+               
+        <!-- hibernate version property -->
+        <hibernate.version>4.2.0.CR1</hibernate.version>
+     
+        <!-- quartz  version property -->
+        <guice.version>3.0</guice.version>
+             
+        <!-- quartz  version property -->
+        <quartz.version>1.6.1</quartz.version>
+        
+        <!-- slf4j version property -->
+        <slf4j.version>1.7.2</slf4j.version>
+        
+        <!-- slf4j log4j version property -->
+        <slf4j.log4j.version>1.7.2</slf4j.log4j.version>
+        
+        <!-- Junit  version property -->
+        <log4j.version>1.2.17</log4j.version>
+        
+        <!-- Junit  version property -->
+        <commons.logging.version>1.2</commons.logging.version>
+        
+        <!-- Junit  version property -->
+        <junit.version>4.8.2</junit.version>
+        
+        <!-- javaee  version property -->
+        <javaee.version>6.0</javaee.version>
+        
+        <!-- javaee  version property -->
+        <javax.persistence.version>2.0.3</javax.persistence.version>
+        
+        <!-- Oracle JDBC version property -->
+	<oracle-jdbc.version>11.2.0.3</oracle-jdbc.version>
+        
+        <!-- generic dao version property -->
+	<generic.dao.version>1.2.0</generic.dao.version>
+	
+        <!-- EclipsLink version property -->
+	<eclipsLink-jpa.version>2.3.2</eclipsLink-jpa.version>
+        
+         <!-- jpersistence tools version property -->
+	<jpersistencetools.version>2.0</jpersistencetools.version>
+	
+        
+  </properties>
+
+  <dependencies>
+      
+    <!-- shiro core dependency -->
+    <dependency>
+                        <groupId>org.apache.shiro</groupId>
+                        <artifactId>shiro-core</artifactId>
+                        <version>${shiro.version}</version>
+    </dependency>
+                
+    <!--  shiro cache dependency  -->
+    <dependency>
+                        <groupId>org.apache.shiro</groupId>
+                        <artifactId>shiro-ehcache</artifactId>
+                        <version>${shiro.version}</version>
+    </dependency>
+    
+    <!--  junit dependency  --> 
+    <dependency>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                        <version>${junit.version}</version>
+                        <scope>test</scope>
+    </dependency>
+    
+    <!--  eclipselink dependency  -->
+    <dependency>
+                        <groupId>org.eclipse.persistence</groupId>
+                        <artifactId>eclipselink</artifactId>
+                        <version>${eclipsLink-jpa.version}</version>
+    </dependency>
+    
+    <!--  javax persistence dependency  -->
+    <dependency>
+                        <groupId>org.eclipse.persistence</groupId>
+                        <artifactId>javax.persistence</artifactId>
+                        <version>${javax.persistence.version}</version>
+    </dependency>
+    
+    <!--  jpamodelgen dependency  -->
+    <dependency>
+                        <groupId>org.eclipse.persistence</groupId>
+                        <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+                        <version>${eclipsLink-jpa.version}</version>
+                        <scope>provided</scope>
+    </dependency>
+    
+    <!--  google code dao dependency  -->
+    <dependency>
+                        <groupId>com.googlecode.genericdao</groupId>
+                        <artifactId>dao</artifactId>
+                        <version>${generic.dao.version}</version>                       
+    </dependency>
+    
+    <!--  google code dao jpa search dependency  -->
+    <dependency>
+			<groupId>com.googlecode.genericdao</groupId>
+			<artifactId>search-jpa-hibernate</artifactId>
+			<version>${generic.dao.version}</version>
+    </dependency>
+    
+    <!-- google guice -->
+    <dependency>
+                        <groupId>com.google.inject</groupId>
+                        <artifactId>guice</artifactId>
+                        <version>${guice.version}</version>
+    </dependency>
+    
+    <!--  shiro cache dependency  -->
+    <dependency>
+                        <groupId>org.hibernate</groupId>
+                        <artifactId>hibernate-entitymanager</artifactId>
+                        <version>${hibernate.version}</version>
+    </dependency>
+		
+    <!-- Using Sl4j Log4J for logging -->
+    <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.log4j.version}</version>
+    </dependency>
+    
+    <!-- Log4J dependency -->
+    <dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+    </dependency>
+    
+    <!--  commons logging dependency  -->
+    <dependency>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                        <version>${commons.logging.version}</version>
+    </dependency>
+    
+    <!-- Oracle JDBC dependency -->
+    <dependency>
+                        <groupId>com.oracle</groupId>
+                        <artifactId>ojdbc6</artifactId>
+                        <version>${oracle-jdbc.version}</version>
+			<scope>compile</scope>
+    </dependency>
+    
+    <!--  jpersistencetool dependency  -->
+    <dependency>
+                        <groupId>net.leadware</groupId>
+                        <artifactId>jpersistence-tools-core</artifactId>
+                        <version>${jpersistencetools.version}</version>
+    </dependency>
+    
+    <!--  hsqldb dependency  -->
+    <dependency>
+                        <groupId>org.hsqldb</groupId>
+                        <artifactId>hsqldb</artifactId>
+                        <version>${hsqldb.version}</version>
+                        <scope>test</scope>
+    </dependency>
+    
+  </dependencies>
+</project>
